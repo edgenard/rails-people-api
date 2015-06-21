@@ -10,6 +10,9 @@ gem 'spring', :group => :development
 
 gem 'pg'
 
+gem 'active_model_serializers'
+
+gem "paranoia", "~> 2.0"
 
 group :development do
   gem 'better_errors'
