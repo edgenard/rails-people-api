@@ -14,6 +14,8 @@ gem 'active_model_serializers'
 
 gem "paranoia", "~> 2.0"
 
+gem 'rack-cors', :require => 'rack/cors'
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'

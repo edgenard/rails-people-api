@@ -1,7 +1,8 @@
 class PeopleController < ApplicationController
   
   def index
-    @people = Person.all
+    @people = Person.with_deleted.all
+    p @people
     render json: @people
   end
   
@@ -36,10 +37,15 @@ class PeopleController < ApplicationController
     @person.destroy
   end
   
+  def deleted_people
+    @deleted = Person.only_deleted
+    render json: @deleted
+  end
+  
   private
   
   def person_params
-    params.permit(:name, :date_of_birth)
+    params.require(:person).permit(:name, :date_of_birth)
   end
     
 end
