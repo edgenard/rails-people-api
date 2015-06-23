@@ -2,7 +2,6 @@ class PeopleController < ApplicationController
   
   def index
     @people = Person.with_deleted.all
-    p @people
     render json: @people
   end
   
@@ -40,6 +39,11 @@ class PeopleController < ApplicationController
   def deleted_people
     @deleted = Person.only_deleted
     render json: @deleted
+  end
+  
+  def active
+    @people = Person.all
+    render json: @people
   end
   
   private
