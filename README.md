@@ -1,3 +1,3 @@
 # Rails People API
 
-The API backend for [EmberPeople](https//:emmanuelgenard.com/ember-people)
+The API backend for [EmberPeople](http//:emmanuelgenard.com/ember-people)
