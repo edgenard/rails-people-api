@@ -46,6 +46,11 @@ class PeopleController < ApplicationController
     render json: @people
   end
   
+  def restore
+    @person = Person.restore(params[:id])
+    render json: @person
+  end
+  
   private
   
   def person_params

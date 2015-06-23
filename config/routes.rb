@@ -6,6 +6,12 @@ Rails.application.routes.draw do
       get "deleted_people"
       get "active"
     end
+    
+    member do
+      post "restore"
+    end
+    
+    
   end
 
 end
