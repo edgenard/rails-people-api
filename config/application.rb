@@ -29,7 +29,7 @@ module People
     #CORS Setup
     config.middleware.insert_before 0, "Rack::Cors" do
       allow do
-      origins 'localhost:4200', 'anotheremberapporigin'
+      origins 'localhost:4200', 'http://emmanuelgenard.com'
 
       resource '*',
         headers: :any,
