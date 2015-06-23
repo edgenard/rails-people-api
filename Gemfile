@@ -16,6 +16,10 @@ gem "paranoia", "~> 2.0"
 
 gem 'rack-cors', :require => 'rack/cors'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
