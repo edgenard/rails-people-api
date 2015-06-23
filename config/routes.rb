@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  get "/",  :to => redirect("root.html")
   
   resources :people, only: [:index, :create, :show, :update, :destroy] do
     collection do
