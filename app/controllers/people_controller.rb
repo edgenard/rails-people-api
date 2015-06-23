@@ -23,6 +23,7 @@ class PeopleController < ApplicationController
   
   def update
     @person = Person.find(params[:id])
+    p @person
     if @person.update_attributes(person_params)
       render json: @person
     else
